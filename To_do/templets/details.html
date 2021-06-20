@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <form method="POST" style="margin-top: 16px;">
+         {% csrf_token %}
+             <div class="form-group" >
+        <input type="text" name="task" class="form-control" placeholder="Task name">
+        </div>
+        <div class="form-group">
+            <input type="text" name="priority" class="form-control" placeholder="Enter your priority">
+
+        </div>
+
+    <input type="submit" style="margin-left: 29%;" class="btn btn-success">
+        </form>
+
+
+
+</div>
+</div>
+ {% for i in task1 %}
+    {{i.name}}
+{{i.priority}}
+<br>
+{% endfor %}
+
+{% endblock %}
